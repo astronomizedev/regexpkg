@@ -19,8 +19,6 @@ function test(regexName, string) {
     return regexes[regexName].test(string)
 }
 
-console.log(getAllRegexes()) // REMOVE AFTER TESTING
-
 module.exports = {
     Regex: regexes,
     getAllRegexes: getAllRegexes,
