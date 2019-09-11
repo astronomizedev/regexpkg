@@ -1,0 +1,16 @@
+{
+    "name": "regexpkg",
+    "version": "1.0.6",
+    "description": "A library that supplies useful regex.",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test.js"
+    },
+    "keywords": [
+        "regex",
+        "library",
+        "package"
+    ],
+    "author": "",
+    "license": "ISC"
+}
