@@ -8,7 +8,9 @@ assignees: ''
 ---
 
 ## Describe the bug
-include as much information here as possible!
 
 ## What versions are you using?
-make sure to include the node version and the version of regexpkg.
+Please include your node _and_ regexpkg versions.
+
+## Show some code
+What code caused this problem?
