@@ -1,7 +1,5 @@
 const fs = require('fs'), regexes = require('./regexes.js')
 
-console.log(regexes)
-
 /**
  * Returns all the regexes in the library.
  */

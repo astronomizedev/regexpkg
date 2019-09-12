@@ -7,11 +7,15 @@ major = parseInt(version[0]),
 minor = parseInt(version[1]), 
 bug = parseInt(version[2])
 
-if(bug >= 100) {
+if(minor >= 100) {
+    major++;
+    minor = 0
     bug = 0
-    minor += 1
+} else if(bug >= 100) {
+    bug = 0
+    minor++
 } else {
-    bug += 1
+    bug++
 }
 
 var final = `${major}.${minor}.${bug}`
@@ -19,11 +23,5 @@ var final = `${major}.${minor}.${bug}`
 package.version = final
 fs.writeFileSync('./package.json', JSON.stringify(package, null, 4))
 const { exec } = require('child_process');
-exec('npm publish', (err, stdout, stderr) => {
-  if (err) {
-    return;
-  }
-
-  console.log(`stdout: ${stdout}`);
-  console.log(`stderr: ${stderr}`);
-});
+exec('npm publish');
+console.log(`+${final}`)
